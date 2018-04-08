@@ -53,5 +53,7 @@ test_frame['is_duplicate'] = test_frame['intersection_over_union_score']*w[0]+w[
 
 sub = pd.DataFrame()
 sub['test_id'] = test_frame['test_id']
-sub['is_duplicate'] = test_frame['is_duplicate']
+# according to required field i am changing 'is_duplicate' name to 'probability'
+# sub['is_duplicate'] = test_frame['is_duplicate']
+sub['probability'] = test_frame['is_duplicate']
 sub.to_csv('rishabh_exop_sol.csv', index=False)
